@@ -488,6 +488,20 @@ var JETPACK_MU_WPCOM_SETTINGS = {"assetsUrl":"https:\/\/s0.wp.com\/wp-content\/m
 var WPGroHo = {"my_hash":""};
 </script>
 <script>
+window.addEventListener( "load", function( event ) {
+	var link = document.createElement( "link" );
+	link.href = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.css?v=20241015";
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	document.head.appendChild( link );
+
+	var script = document.createElement( "script" );
+	script.src = "https://s0.wp.com/wp-content/mu-plugins/actionbar/actionbar.js?v=20231122";
+	script.defer = true;
+	document.body.appendChild( script );
+} );
+</script>
+<script>
 ( function() {
 	function getMobileUserAgentInfo() {
 		if ( typeof wpcom_mobile_user_agent_info === 'object' ) {
